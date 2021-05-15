@@ -1,4 +1,3 @@
-"use strict";
 var Component = /** @class */ (function () {
     function Component(parentId) {
         this.parentId = parentId;
@@ -10,7 +9,9 @@ var Component = /** @class */ (function () {
         attributeInfos &&
             component.setAttribute(attributeInfos.name, attributeInfos.value);
         document.getElementById(this.parentId).appendChild(component);
+        return component;
     };
     Component.prototype.render = function () { };
     return Component;
 }());
+export default Component;

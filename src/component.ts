@@ -14,7 +14,9 @@ class Component {
 		attributeInfos &&
 			component.setAttribute(attributeInfos.name, attributeInfos.value);
 		document.getElementById(this.parentId)!.appendChild(component);
+		return component;
 	}
 
 	render() {}
 }
+export default Component;
