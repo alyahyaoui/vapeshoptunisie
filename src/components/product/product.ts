@@ -10,10 +10,10 @@ class Product extends Component {
 		public imgUrl?: string,
 		public Quantity?: number,
         ) {
-		super(parentId);
+		super(parentId,shouldRender);
 	}
 	render() {
-		const product = this.createComponent('div', 'product-item');
+		const product = this.createComponent('li', 'product-item');
 		product.innerHTML = `
         <h6>${this.name}</h6>
         <h6>${this.type}</h6>

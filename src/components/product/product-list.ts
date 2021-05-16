@@ -11,7 +11,7 @@ class ProductList extends Component {
 			'product-list',
 			new CreateAttribute('id', 'product-list'),
 		);
-		new Product('product-list', 'box', true,);
+		new Product('product-list', 'box', false).render();
 	}
 }
 export default ProductList;

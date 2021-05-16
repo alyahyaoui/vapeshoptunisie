@@ -23,7 +23,7 @@ var ProductList = /** @class */ (function (_super) {
     }
     ProductList.prototype.render = function () {
         this.createComponent('ul', 'product-list', new CreateAttribute('id', 'product-list'));
-        new Product('product-list', 'box', true);
+        new Product('product-list', 'box', false).render();
     };
     return ProductList;
 }(Component));

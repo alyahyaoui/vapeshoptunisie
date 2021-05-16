@@ -17,7 +17,7 @@ import Component from '../../component.js';
 var Product = /** @class */ (function (_super) {
     __extends(Product, _super);
     function Product(parentId, name, shouldRender, type, price, imgUrl, Quantity) {
-        var _this = _super.call(this, parentId) || this;
+        var _this = _super.call(this, parentId, shouldRender) || this;
         _this.name = name;
         _this.type = type;
         _this.price = price;
@@ -26,7 +26,7 @@ var Product = /** @class */ (function (_super) {
         return _this;
     }
     Product.prototype.render = function () {
-        var product = this.createComponent('div', 'product-item');
+        var product = this.createComponent('li', 'product-item');
         product.innerHTML = "\n        <h6>" + this.name + "</h6>\n        <h6>" + this.type + "</h6>\n        <h6>" + this.price + "</h6>\n        <h6>" + this.Quantity + "</h6>\n        ";
     };
     return Product;
