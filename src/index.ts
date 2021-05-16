@@ -11,4 +11,5 @@ class App {
 		new Drawer('root');
 	}
 }
+
 App.init();

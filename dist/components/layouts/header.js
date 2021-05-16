@@ -13,14 +13,18 @@ var __extends = (this && this.__extends) || (function () {
         d.prototype = b === null ? Object.create(b) : (__.prototype = b.prototype, new __());
     };
 })();
+import { CreateAttribute } from './../../utils.js';
 import Component from '../../component.js';
+import NavMenu from '../nav-menu.js';
 var Header = /** @class */ (function (_super) {
     __extends(Header, _super);
     function Header(parentId) {
         return _super.call(this, parentId) || this;
     }
     Header.prototype.render = function () {
-        this.createComponent('header', 'main-header');
+        var header = this.createComponent('header', 'main-header', new CreateAttribute('id', 'main-header'));
+        header.innerHTML = "\n        <h6 class=\"logo\">Yonko Vape</h6>\n        <h6 class=\"search\">search</h6>\n        <h6 class=\"cart\">cart</h6>\n        <h6 class=\"login\">login</h6>\n    ";
+        new NavMenu('main-header');
     };
     return Header;
 }(Component));

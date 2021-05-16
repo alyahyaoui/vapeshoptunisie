@@ -1,12 +1,13 @@
+import { Attribute } from './utils.js';
 class Component {
-	constructor(public parentId: string) {
-		this.render();
+	constructor(public parentId: string, shouldRender = true) {
+	 	shouldRender &&	this.render();
 	}
 
 	createComponent(
 		tag: string,
 		classNames?: string,
-		attributeInfos?: { name: string; value: string },
+		attributeInfos?: Attribute,
 	) {
 		const component = document.createElement(tag);
 

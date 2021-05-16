@@ -1,7 +1,8 @@
 var Component = /** @class */ (function () {
-    function Component(parentId) {
+    function Component(parentId, shouldRender) {
+        if (shouldRender === void 0) { shouldRender = true; }
         this.parentId = parentId;
-        this.render();
+        shouldRender && this.render();
     }
     Component.prototype.createComponent = function (tag, classNames, attributeInfos) {
         var component = document.createElement(tag);

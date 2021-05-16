@@ -14,13 +14,16 @@ var __extends = (this && this.__extends) || (function () {
     };
 })();
 import Component from '../../component.js';
+import { CreateAttribute } from '../../utils.js';
+import ProductList from '../product/product-list.js';
 var Main = /** @class */ (function (_super) {
     __extends(Main, _super);
     function Main(parentId) {
         return _super.call(this, parentId) || this;
     }
     Main.prototype.render = function () {
-        this.createComponent('main', 'main');
+        this.createComponent('main', 'main', new CreateAttribute('id', 'main'));
+        new ProductList('main');
     };
     return Main;
 }(Component));
